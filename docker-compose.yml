@@ -16,10 +16,9 @@ services:
       args:
         BACKEND_URL: http://backend:8000
     restart: unless-stopped
-    environment:
-      # Coolify: generates a public URL routed to port 3000
-      - SERVICE_FQDN_FRONTEND_3000
-    ports:
-      - "3000:3000"
+    # Public domain is assigned in Coolify (docker_compose_domains → frontend:3000).
+    # Local run: add `ports: ["3000:3000"]`.
+    expose:
+      - "3000"
     depends_on:
       - backend
