@@ -1,0 +1,19 @@
+{
+  "name": "Wandscheibe",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+  "hostRequirements": { "cpus": 2, "memory": "4gb" },
+  "postCreateCommand": "pip install --no-cache-dir -r backend/requirements.txt && npm ci --prefix frontend && npm run build --prefix frontend",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [3000, 8000],
+  "portsAttributes": {
+    "3000": { "label": "Wandscheibe (App)", "onAutoForward": "openBrowser" },
+    "8000": { "label": "Backend (FastAPI)", "onAutoForward": "silent" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] },
+    "vscode": { "extensions": ["ms-python.python"] }
+  }
+}

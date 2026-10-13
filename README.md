@@ -18,6 +18,14 @@ Hauptspannungen, Trajektorien, Spannungsschnitten σx/σy, Konturplots sowie erf
 - **Backend:** FastAPI + [PyNiteFEA](https://github.com/JWock82/Pynite) (Scheibenmodell mit Quad-Elementen)
 - **Spezifikation:** [PLAN.md](PLAN.md) – Geometrie, FE-Modell, Lastkombinationen, API-Vertrag
 
+## Ausprobieren in GitHub Codespaces
+
+[![In GitHub Codespaces öffnen](https://github.com/codespaces/badge.svg)](https://codespaces.new/ahofbeck/wandscheibe?quickstart=1)
+
+Codespace erstellen → Abhängigkeiten werden installiert und das Frontend gebaut (beim ersten Mal einige Minuten) →
+Backend und App starten automatisch, die App öffnet sich auf Port 3000 im Browser.
+Falls nicht: im Tab „Ports“ die Adresse von Port 3000 öffnen bzw. `bash .devcontainer/start.sh` ausführen.
+
 ## Start (lokal)
 
 ```powershell
